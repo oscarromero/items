@@ -1,7 +1,6 @@
 'use client'
+import Items from '@/app/items/page';
 
-import { useRouter } from "next/navigation";
 export default function Home() {
-  const router = useRouter();
-  router.push('/items');
+  return (<Items/>);
 }

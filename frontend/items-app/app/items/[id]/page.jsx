@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import Divider from "@mui/material/Divider";
 import Button from "@mui/material/Button";
 import LoadingButton from "@mui/lab/LoadingButton";
@@ -31,7 +31,7 @@ const ItemPage = () => {
   };
 
   const handleClose = () => {
-    window.location = '/';
+    window.location = '/items';
   };
 
   const handleConfirm = async () => {

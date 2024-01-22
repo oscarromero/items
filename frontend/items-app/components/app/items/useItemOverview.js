@@ -98,6 +98,7 @@ const useItemOverview = () => {
       data,
       fetchData,
       itemsLoaded,
+      setItemsLoaded,
       onEdit: handleEditItem,
       onDelete: openDeleteDialog,
       onItemSelected: handleItemSelected,
