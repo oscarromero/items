@@ -1,5 +1,7 @@
 'use client'
 
+import { useRouter } from "next/navigation";
 export default function Home() {
-  window.location = '/items';
+  const router = useRouter();
+  router.push('/items');
 }
