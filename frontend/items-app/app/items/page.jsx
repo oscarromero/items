@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Modal from "@/components/ui/notification/Modal";
 import CrudToolbar from "@/components/ui/crud/CrudToolbar";
@@ -37,7 +37,7 @@ export default function Items() {
   const toolbar = <CrudToolbar {...toolbarProps} />;
 
   return (
-    <>      
+    <Suspense>
       <ItemPageComponent title={"Overview"} toolbar={toolbar}>
         <ItemsOverviewComponent {...itemOverviewProps} />
         <Modal {...itemFormProps}>
@@ -46,6 +46,6 @@ export default function Items() {
       </ItemPageComponent>
       <Notification {...notificationProps} />
       <Dialog {...dialogProps} />
-    </>
+    </Suspense>
   );
 }
